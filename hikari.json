@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.1.4",
   "name": "custom.jmx.com.zaxxer.hikari",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
@@ -134,7 +134,7 @@
             "displayname": "Idle Connections",
             "seriestype": "bar",
             "stacked": true,
-            "color": "#f4ee41",
+            "color": "#14a8f5",
             "rightaxis": false
           },
           {
@@ -142,14 +142,14 @@
             "displayname": "Active Connections",
             "seriestype": "bar",
             "stacked": true,
-            "color": "#42f4ce",
+            "color": "#6598ba",
             "rightaxis": false
           },
           {
             "key": "TotalConnections",
             "displayname": "Total Connections",
             "seriestype": "line",
-            "color": "#417ff4",
+            "color": "#8B4000",
             "rightaxis": false
           },
           {
@@ -192,7 +192,7 @@
         "title": "Thread Pool",
         "series": [{
           "key": "ThreadsAwaitingConnection",
-          "displayname": "Waiting Threads",
+          "displayname": "Threads Awaiting Connection",
           "seriestype": "area",
           "color": "#f4ee41",
           "rightaxis": false
