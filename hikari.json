@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "name": "custom.jmx.com.zaxxer.hikari",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
@@ -32,7 +32,7 @@
         "allowAdditionalKeys": true,
         "calculateDelta": false,
         "calculateRate": false,
-        "aggregation": "AVG"
+        "aggregation": "MAX"
       }
     },
     {
