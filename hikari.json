@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.2.1",
   "name": "custom.jmx.com.zaxxer.hikari",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
@@ -28,16 +28,11 @@
         "keyProperties": {
           "type": "*"
         },
-        "allowAdditionalKeys": false,
         "attribute": "ActiveConnections",
+        "allowAdditionalKeys": true,
         "calculateDelta": false,
         "calculateRate": false,
-        "aggregation": "MAX",
-        "splitting": {
-          "name": "type",
-          "type": "keyProperty",
-          "keyProperty": "type"
-        }
+        "aggregation": "AVG"
       }
     },
     {
@@ -128,13 +123,13 @@
   "ui": {
     "charts": [{
         "group": "HikariCP",
-        "title": "Connection Pool stacked",
+        "title": "Connection Pool",
         "series": [{
             "key": "IdleConnections",
             "displayname": "Idle Connections",
             "seriestype": "bar",
             "stacked": true,
-            "color": "#14a8f5",
+            "color": "#7ed0fc",
             "rightaxis": false
           },
           {
@@ -163,38 +158,12 @@
       },
       {
         "group": "HikariCP",
-        "title": "Connection Pool Areas",
-        "series": [{
-            "key": "ActiveConnections",
-            "displayname": "Active Connections",
-            "seriestype": "area",
-            "color": "#42f4ce",
-            "rightaxis": false
-          },
-          {
-            "key": "IdleConnections",
-            "displayname": "Idle Connections",
-            "seriestype": "area",
-            "color": "#f4ee41",
-            "rightaxis": false
-          },
-          {
-            "key": "MaximumPoolSize",
-            "displayname": "Max Pool Size",
-            "seriestype": "line",
-            "color": "#417ff4",
-            "rightaxis": false
-          }
-        ]
-      },
-      {
-        "group": "HikariCP",
         "title": "Thread Pool",
         "series": [{
           "key": "ThreadsAwaitingConnection",
           "displayname": "Threads Awaiting Connection",
           "seriestype": "area",
-          "color": "#f4ee41",
+          "color": "#6598ba",
           "rightaxis": false
         }]
       }
