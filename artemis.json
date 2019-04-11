@@ -1,0 +1,657 @@
+{
+  "version": "0.2.4",
+  "name": "custom.jmx.ArtemisJMX",
+  "type": "JMX",
+  "processTypes": [
+    10,
+    12,
+    13,
+    16,
+    17,
+    18
+  ],
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "configUI": {
+    "displayName": "ActiveMQ Artemis JMX"
+  },
+  "ui": {
+    "keycharts" : [
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "TotalMessageCount",
+        "series": [
+          {
+            "key": "BrokerTotalMessageCount",
+            "aggregation": "max",
+            "displayname": "TotalMessageCount"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "AddressMemoryUsagePercentage",
+        "series": [
+          {
+            "key": "BrokerAddressMemoryUsagePercentage",
+            "aggregation": "max",
+            "displayname": "AddressMemoryUsagePercentage"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "Connections",
+        "series": [
+          {
+            "key": "BrokerConnectionCount",
+            "aggregation": "max",
+            "displayname": "ConnectionCount",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "BrokerTotalConsumerCount",
+            "aggregation": "max",
+            "displayname": "TotalConsumerCount",
+            "color": "#6598ba"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "Message throughput",
+        "series": [
+          {
+            "key": "BrokerTotalMessagesAdded",
+            "aggregation": "max",
+            "displayname": "TotalMessagesAdded",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "BrokerTotalMessagesAcknowledged",
+            "aggregation": "max",
+            "displayname": "TotalMessagesAcknowledged",
+            "color": "#6598ba"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "TotalMessageCount",
+        "series": [
+          {
+            "key": "BrokerTotalMessageCount",
+            "aggregation": "max",
+            "displayname": "TotalMessageCount"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "AddressMemoryUsagePercentage",
+        "series": [
+          {
+            "key": "BrokerAddressMemoryUsagePercentage",
+            "aggregation": "max",
+            "displayname": "AddressMemoryUsagePercentage"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "Connections",
+        "series": [
+          {
+            "key": "BrokerConnectionCount",
+            "aggregation": "max",
+            "displayname": "ConnectionCount",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "BrokerTotalConsumerCount",
+            "aggregation": "max",
+            "displayname": "TotalConsumerCount",
+            "color": "#6598ba"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis",
+        "title": "Message throughput",
+        "series": [
+          {
+            "key": "BrokerTotalMessagesAdded",
+            "aggregation": "max",
+            "displayname": "TotalMessagesAdded",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "BrokerTotalMessagesAcknowledged",
+            "aggregation": "max",
+            "displayname": "TotalMessagesAcknowledged",
+            "color": "#6598ba"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis Queues",
+        "title": "Number of messages",
+        "series": [
+          {
+            "key": "AddressMessageCount",
+            "aggregation": "max",
+            "displayname": "MessageCount",
+            "color": "#6598ba"
+          },
+          {
+            "key": "AddressDeliveringCount",
+            "aggregation": "max",
+            "displayname": "DeliveringCount",
+            "color": "#228b22"
+          },
+          {
+            "key": "AddressNumberOfMessages",
+            "aggregation": "max",
+            "displayname": "NumberOfMessages (Sum of messages on queues)",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "AddressDurableMessageCount",
+            "aggregation": "max",
+            "displayname": "DurableMessageCount",
+            "color": "#cccc00"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis Queues",
+        "title": "Message throughput",
+        "series": [
+          {
+            "key": "AddressMessagesAdded",
+            "aggregation": "max",
+            "displayname": "MessagesAdded",
+            "color": "#7ed0fc"
+          },
+          {
+            "key": "AddressMessagesAcknowledged",
+            "aggregation": "max",
+            "displayname": "MessagesAcknowledged",
+            "color": "#6598ba"
+          },
+          {
+            "key": "AddressMessagesExpired",
+            "aggregation": "max",
+            "displayname": "MessagesExpired",
+            "color": "#cccc00"
+          },
+          {
+            "key": "AddressMessagesKilled",
+            "aggregation": "max",
+            "displayname": "MessagesKilled",
+            "color": "#ff0000"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis Queues",
+        "title": "ConsumerCount",
+        "series": [
+          {
+            "key": "AddressConsumerCount",
+            "aggregation": "max",
+            "displayname": "ConsumerCount"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis Queues",
+        "title": "UnRoutedMessageCount",
+        "series": [
+          {
+            "key": "AddressUnRoutedMessageCount",
+            "aggregation": "max",
+            "displayname": "UnRoutedMessageCount"
+          }
+        ]
+      },
+      {
+        "group": "ActiveMQ Artemis Queues",
+        "title": "PersistentSize",
+        "series": [
+          {
+            "key": "AddressPersistentSize",
+            "aggregation": "max",
+            "displayname": "PersistentSize"
+          }
+        ]
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "BrokerTotalConsumerCount",
+        "unit": "Count",
+        "displayname": "TotalConsumerCount",
+        "dimensions": [
+            "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "TotalConsumerCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "BrokerConnectionCount",
+        "unit": "Count",
+        "displayname": "ConnectionCount",
+        "dimensions": [
+            "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "ConnectionCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "BrokerTotalMessageCount",
+        "unit": "Count",
+        "displayname": "TotalMessageCount",
+        "dimensions": [
+            "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "TotalMessageCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressUnRoutedMessageCount",
+        "unit": "Count",
+        "displayname": "UnRoutedMessageCount",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*",
+          "component": "addresses"
+        },
+        "attribute": "UnRoutedMessageCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "BrokerTotalMessagesAdded",
+        "unit": "Count",
+        "displayname": "TotalMessagesAdded",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "TotalMessagesAdded",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "BrokerTotalMessagesAcknowledged",
+        "unit": "Count",
+        "displayname": "TotalMessagesAcknowledged",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "TotalMessagesAcknowledged",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "BrokerAddressMemoryUsagePercentage",
+        "unit": "Count",
+        "displayname": "AddressMemoryUsagePercentage",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "broker": "*"
+        },
+        "attribute": "AddressMemoryUsagePercentage",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressConsumerCount",
+        "unit": "Count",
+        "displayname": "ConsumerCount",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "ConsumerCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressDurableMessageCount",
+        "unit": "Count",
+        "displayname": "DurableMessageCount",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "DurableMessageCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressMessageCount",
+        "unit": "Count",
+        "displayname": "MessageCount",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "MessageCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressMessagesAdded",
+        "unit": "Count",
+        "displayname": "MessagesAdded",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "MessagesAdded",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressMessagesExpired",
+        "unit": "Count",
+        "displayname": "MessagesExpired",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "MessagesExpired",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressMessagesAcknowledged",
+        "unit": "Count",
+        "displayname": "MessagesAcknowledged",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "MessagesAcknowledged",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressNumberOfMessages",
+        "unit": "Count",
+        "displayname": "NumberOfMessages",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "NumberOfMessages",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressDeliveringCount",
+        "unit": "Count",
+        "displayname": "DeliveringCount",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "DeliveringCount",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressMessagesKilled",
+        "unit": "Count",
+        "displayname": "MessagesKilled",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {
+        "domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "MessagesKilled",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    },
+    {
+      "timeseries": {
+        "key": "AddressPersistentSize",
+        "unit": "Byte",
+        "displayname": "PersistentSize",
+        "dimensions": [
+            "rx_pid",
+            "address"
+        ]
+      },
+      "source": {"domain": "org.apache.activemq.artemis",
+        "keyProperties": {
+          "address": "*"
+        },
+        "attribute": "PersistentSize",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "MAX",
+        "splitting": {
+            "name": "address",
+            "type": "keyProperty",
+            "keyProperty": "address"
+        }
+      }
+    }
+  ]
+}
