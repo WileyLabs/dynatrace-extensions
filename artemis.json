@@ -1,5 +1,5 @@
 {
-  "version": "0.2.4",
+  "version": "0.3.0",
   "name": "custom.jmx.ArtemisJMX",
   "type": "JMX",
   "processTypes": [
@@ -15,6 +15,36 @@
     "displayName": "ActiveMQ Artemis JMX"
   },
   "ui": {
+    "keymetrics" : [
+      {
+        "key": "BrokerTotalMessageCount",
+        "aggregation": "sum",
+        "mergeaggregation" : "sum",
+        "displayname": "TotalMessageCount",
+        "seriestype": "area"
+      },
+      {
+        "key": "BrokerConnectionCount",
+        "aggregation": "sum",
+        "mergeaggregation" : "sum",
+        "displayname": "ConnectionCount",
+        "seriestype": "area"
+      },
+      {
+        "key": "BrokerTotalConsumerCount",
+        "aggregation": "sum",
+        "mergeaggregation" : "sum",
+        "displayname": "TotalConsumerCount",
+        "seriestype": "area"
+      },
+      {
+        "key": "BrokerAddressMemoryUsagePercentage",
+        "aggregation": "sum",
+        "mergeaggregation" : "sum",
+        "displayname": "AddressMemoryUsagePercentage",
+        "seriestype": "area"
+      }
+    ],
     "keycharts" : [
       {
         "group": "ActiveMQ Artemis",
@@ -637,7 +667,8 @@
             "address"
         ]
       },
-      "source": {"domain": "org.apache.activemq.artemis",
+      "source": {
+        "domain": "org.apache.activemq.artemis",
         "keyProperties": {
           "address": "*"
         },
