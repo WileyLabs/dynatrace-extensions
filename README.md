@@ -6,7 +6,7 @@ Once application is configured and MBeans are registered new charts under "Hikar
 ## Apache ActiveMQ Artemis
 Artemis is JMS2.0-compatible message broker. This dynatrace extension adds few new charts:
 
- - High level broker health at the key metric at primary process and Further Details pages
+ - High level broker health as the key metric at primary process and Further Details pages
  - Health metrics for each queue/topic configured on broker on Further Details page
 
 In order to enable monitoring [role-based authorization has to be configured](https://activemq.apache.org/components/artemis/documentation/latest/management.html#role-based-authorisation-for-jmx) to enable at least read access without credentials for Dynatrace.
