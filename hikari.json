@@ -1,5 +1,5 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "name": "custom.jmx.com.zaxxer.hikari",
   "type": "JMX",
   "entity": "PROCESS_GROUP_INSTANCE",
@@ -14,6 +14,7 @@
     17,
     18
   ],
+  "metricGroup": "hikari.plugins",
   "metrics": [{
       "timeseries": {
         "key": "ActiveConnections",

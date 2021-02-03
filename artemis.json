@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "custom.jmx.ArtemisJMX",
   "type": "JMX",
   "processTypes": [
@@ -10,6 +10,7 @@
     17,
     18
   ],
+  "metricGroup": "artemis.plugins",
   "entity": "PROCESS_GROUP_INSTANCE",
   "configUI": {
     "displayName": "ActiveMQ Artemis JMX"
